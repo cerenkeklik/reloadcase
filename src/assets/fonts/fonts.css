@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'SF Pro';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./SF-Pro-Display-Regular.woff') format('opentype');
+    /* Diğer font ağırlıkları ve formatları burada tanımlanabilir */
+  }
+  @font-face {
+    font-family: 'SF Pro';
+    font-weight: 300;
+    font-style: normal;
+    src: url('./SF-Pro-Display-Semibold.woff') format('opentype');
+    /* Diğer font ağırlıkları ve formatları burada tanımlanabilir */
+  }
+  
+  @font-face {
+    font-family: 'SF Pro';
+    font-weight: 200;
+    font-style: normal;
+    src: url('./SF-Pro-Display-Thin.woff') format('opentype');
+    /* Diğer font ağırlıkları ve formatları burada tanımlanabilir */
+  }
+  
+  @font-face {
+    font-family: 'SF Pro';
+    font-weight: 100;
+    font-style: normal;
+    src: url('./SF-Pro-Display-Ultralight.woff') format('opentype');
+    /* Diğer font ağırlıkları ve formatları burada tanımlanabilir */
+  }

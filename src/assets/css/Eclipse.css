@@ -1,0 +1,7 @@
+.eclipse{
+    width: 3060px;
+    height: 3060px;
+    border-radius: 100%;
+    background-color: #101010;
+    border: solid rgba(255, 255, 255, 0.7);
+}
