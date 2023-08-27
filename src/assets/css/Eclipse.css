@@ -1,7 +1,22 @@
-.eclipse{
-    width: 3060px;
-    height: 3060px;
-    border-radius: 100%;
-    background-color: #101010;
-    border: solid rgba(255, 255, 255, 0.7);
+.eclipse {
+  width: 3060px;
+  height: 3060px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top,
+    #ffffff00,
+    #E4E4E461,
+    #FFFFFF3D,
+    #ffffff00
+  );
+  background-image:  radial-gradient(circle at center, #ffffff00 50%, #FFFFFF3D 85% );
+
+  border-radius: 50%;
+  border-width: 5.39px;
+  border-style: solid;
+  border-image: linear-gradient(to right,#e4e4e461, #ffffff00);
 }
+/* 
+linear-gradient(#e4e4e461, #ffffff00);
+linear-gradient(#ffffff3d #ffffff00); */
+/* radial-gradient(#ffffff29 #ffffff00);  */
