@@ -1,6 +1,12 @@
 .color-b6fbfd {
   color: #b6fbfd;
 }
+.bg-b6fbfd{
+    background-color: #b6fbfd !important;
+}
+.color-b6c1ff{
+    color: #b6c1ff !important;
+}
 
 .bg-020202{
     background-color: #020202;

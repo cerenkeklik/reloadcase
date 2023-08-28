@@ -14,8 +14,7 @@
 
 }
 .section4-container-inside-title{
-    font-size: 64px;
-    line-height: 67px;
+    font-size: 36px;
     font-weight: 700;
     width: 75%;
     text-align: center;
@@ -32,3 +31,14 @@
     background-color: #B6FBFF;
     border: 2px solid #B6FBFF;
 }
+
+
+@media (min-width: 992px) {
+
+    .section4-container-inside-title{
+        font-size: 64px;
+        line-height: 67px;
+  }
+}
+
+

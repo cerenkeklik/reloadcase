@@ -3,18 +3,40 @@
   height: 3060px;
   border-radius: 50%;
   background: linear-gradient(
-    to top,
-    #ffffff00,
-    #E4E4E461,
-    #FFFFFF3D,
-    #ffffff00
-  );
-  background-image:  radial-gradient(circle at center, #ffffff00 50%, #FFFFFF3D 85% );
+      88.54deg,
+      rgba(228, 228, 228, 0.38) -60.49%,
+      rgba(255, 255, 255, 0) 47.11%
+    ),
+    radial-gradient(
+        36.82% 36.82% at -0.95% 48.39%,
+        rgba(255, 255, 255, 0.16) 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      ,
+    linear-gradient(
+      89.56deg,
+      rgba(255, 255, 255, 0.24) -41.99%,
+      rgba(255, 255, 255, 0) 8.16%
+    );
 
-  border-radius: 50%;
-  border-width: 5.39px;
-  border-style: solid;
-  border-image: linear-gradient(to right,#e4e4e461, #ffffff00);
+  border: 5.39px solid;
+
+  border-image-source: linear-gradient(
+    88.54deg,
+    rgba(228, 228, 228, 0.38) -60.49%,
+    rgba(255, 255, 255, 0) 47.11%
+  );
+
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Başlangıç açısı */
+  }
+  to {
+    transform: rotate(360deg); /* Bitiş açısı */
+  }
 }
 /* 
 linear-gradient(#e4e4e461, #ffffff00);

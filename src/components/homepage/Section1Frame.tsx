@@ -1,6 +1,6 @@
 import Eclipse from "./Eclipse"
 
-const Section1Frame = () => {
+const Section1Component = ({isFrame}: {isFrame: boolean}) => {
     return(
         <>
          <div className="section1-top">
@@ -14,7 +14,7 @@ const Section1Frame = () => {
             conversational way.
           </div>
         </div>
-        <button className="section1-top-btn">Continue</button>
+       {!isFrame &&  <button className="section1-top-btn">Continue</button>}
       </div>
       <div className="section1-bottom-container">
         <div className="content-wrapper">
@@ -26,4 +26,4 @@ const Section1Frame = () => {
         </>
     )
 }
-export default Section1Frame;
+export default Section1Component;

@@ -1,37 +1,44 @@
 .section3-container {
-  padding-left: 132px;
+  padding-left: 0px;
+  flex-wrap: wrap;
   min-height: 100vh;
   background-color: #020202;
   display: flex;
   border-bottom: solid #303030 1px;
 }
 .section3-left {
-  width: 44%;
+  width: 100%;
   padding-top: 80px;
-  border-right: solid #303030 1px;
   display: flex;
   flex-direction: column;
   gap: 80px;
+  padding-inline: 20px;
+  align-items: center;
 }
 .section3-right {
-  width: 56%;
-  padding: 80px;
-  padding-right: 0;
+  width: 100%;
+  padding: 0;
+  padding-block: 80px;
+  padding-inline: 20px;
   border-right: none;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
+  justify-content: center;
+  max-height: 1200px;
+  overflow-y: scroll;
 }
 .section3-left-top {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
+  align-items: center;
 }
 .section3-left-top-title {
-  font-size: 64px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 67px;
   color: white;
+  text-align: center;
 }
 .section3-left-top-desc {
   font-size: 20px;
@@ -39,6 +46,7 @@
   letter-spacing: 0.72px;
   color: #ffffffb2;
   font-weight: 200;
+  text-align: center;
 }
 
 .section3-left-top-btn {
@@ -51,15 +59,15 @@
   font-size: 15px;
   font-weight: 600;
 }
-/* .section3-left-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+.section3-left-bottom {
+width: 100%;
+display: flex;
+justify-content: center;
+}
 
 .section3-left-bottom-rect {
   background-color: #212121;
-  width: 476px;
+  width: 90%;
   height: 560px;
   border-radius: 20px;
 }
@@ -73,3 +81,55 @@
  line-height: 30px;
  color: #FFFFFF;
 }
+
+
+@media (min-width: 992px) {
+
+  .section3-left-top-desc{
+    text-align: start;
+  }
+
+  .section3-left-top-title {
+    font-size: 64px;
+    line-height: 67px;
+    text-align: start;
+  }
+
+  .section3-container {
+    padding-left: 132px;
+  
+  }
+  .section3-left {
+    width: 44%;
+    padding-inline: 0px;
+    align-items: start;
+    border-right: solid #303030 1px;
+  }
+
+  .section3-left-top {
+    gap: 40px;
+    align-items: start;
+  }
+
+  .section3-right {
+    width: 56%;
+    padding-left: 50px;
+  }
+  .section3-left-bottom-rect {
+    width: 80%;
+  }
+  
+  .section3-left-bottom {
+    justify-content: flex-start;
+    }
+}
+
+
+
+/* @media (min-width: 540px) {
+  .section3-container {
+    padding-inline: 52px;
+  
+  }
+
+} */

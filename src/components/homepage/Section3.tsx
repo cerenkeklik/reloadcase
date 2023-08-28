@@ -1,8 +1,12 @@
 import '../../assets/css/Section3.css'
 import '../../assets/css/General.css'
 import Section3ImageComponent from './Section3ImageComponent'
+import { useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 const Section3 = () => {
+  let nav = useNavigate()
+
   let items: { imageName: string; imageTitle: string }[] = [
     {
       imageName: 'hitachi',
@@ -28,6 +32,14 @@ const Section3 = () => {
       imageName: 'lancome',
       imageTitle: 'Lancome',
     },
+    {
+      imageName: 'aeizei',
+      imageTitle: 'Aeizei',
+    },
+    {
+      imageName: 'lancome',
+      imageTitle: 'Lancome',
+    },
   ]
 
   return (
@@ -41,7 +53,12 @@ const Section3 = () => {
             You can chat many different characters for a few set of topics and
             interests.
           </div>
-          <button className="section3-left-top-btn">Lets start chat</button>
+          <button
+            className="section3-left-top-btn"
+            onClick={() => nav('/chat')}
+          >
+            Lets start chat
+          </button>
         </div>
         <div className="section3-left-bottom">
           <div className="section3-left-bottom-rect"></div>
