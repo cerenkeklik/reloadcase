@@ -27,6 +27,12 @@
   justify-content: center;
   max-height: 1200px;
   overflow-y: scroll;
+  overscroll-behavior: auto; /* default */
+
+}
+
+.section3-right::-webkit-scrollbar{
+  display: none;
 }
 .section3-left-top {
   display: flex;

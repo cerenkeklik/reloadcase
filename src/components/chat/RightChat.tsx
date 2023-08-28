@@ -52,11 +52,11 @@ const RightChat = () => {
     console.log(apiBody)
     GptTurbo(apiBody).then((res) => {
       setMessages([
-        ...newMessages,
         {
           message: res?.choices?.[0].message.content,
           sender: 'ChatGPT',
         },
+        ...newMessages,
       ])
       setTyping(false)
     })

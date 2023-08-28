@@ -6,6 +6,31 @@ import { useEffect, useState } from 'react'
 
 const Section3 = () => {
   let nav = useNavigate()
+  const [isInnerFinished, setIsInnerFinished] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const BodyMin = document.getElementById('section3-container')!.offsetTop
+      let offset = document.documentElement.scrollTop
+   
+      if(offset >= BodyMin && !isInnerFinished) {
+        //stop
+        // prevent scrollingggg 
+        
+        // document.body.style.overflow = 'hidden';
+        // console.log("stop")
+      }else{
+        // document.body.style.overflow = 'scroll';
+      }
+      // console.log(offset, "-", BodyMin)
+    
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   let items: { imageName: string; imageTitle: string }[] = [
     {
@@ -43,7 +68,7 @@ const Section3 = () => {
   ]
 
   return (
-    <div className="section3-container">
+    <div id='section3-container' className="section3-container">
       <div className="section3-left">
         <div className="section3-left-top">
           <div className="section3-left-top-title">
