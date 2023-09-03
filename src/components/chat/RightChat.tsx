@@ -21,8 +21,8 @@ const RightChat = () => {
         message: input,
         sender: 'User',
       }
-      let allmsg = [newMsg, ...messages]
-      setMessages(allmsg)
+      let allmsg = [ ...messages.reverse(), newMsg]
+      setMessages(allmsg.reverse())
       setTyping(true)
       setInput('')
       sendingGPT(allmsg)
@@ -39,25 +39,30 @@ const RightChat = () => {
       }
     )
 
+    console.log(apiMessages, "msg");
+
     let apiBody: any = {
       model: 'gpt-3.5-turbo',
       messages: [
+        ...apiMessages.reverse(),
         {
           role: 'system',
           content: 'content',
-        },
-        ...apiMessages,
+        }
+        ,
       ],
     }
     console.log(apiBody)
     GptTurbo(apiBody).then((res) => {
+      console.log(res, 'api res')
       setMessages([
         {
           message: res?.choices?.[0].message.content,
           sender: 'ChatGPT',
         },
         ...newMessages,
-      ])
+        
+      ], )
       setTyping(false)
     })
   }
