@@ -4,8 +4,6 @@ import '../assets/css/General.css'
 import '../assets/css/Chat.css'
 
 const Chat = () => {
-  
-
   return (
     <div className="chat-container" >
       <LeftChat />

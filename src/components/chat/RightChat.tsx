@@ -21,7 +21,7 @@ const RightChat = () => {
         message: input,
         sender: 'User',
       }
-      let allmsg = [ ...messages.reverse(), newMsg]
+      let allmsg = [...messages.reverse(), newMsg]
       setMessages(allmsg.reverse())
       setTyping(true)
       setInput('')
@@ -39,8 +39,6 @@ const RightChat = () => {
       }
     )
 
-    console.log(apiMessages, "msg");
-
     let apiBody: any = {
       model: 'gpt-3.5-turbo',
       messages: [
@@ -48,21 +46,17 @@ const RightChat = () => {
         {
           role: 'system',
           content: 'content',
-        }
-        ,
+        },
       ],
     }
-    console.log(apiBody)
     GptTurbo(apiBody).then((res) => {
-      console.log(res, 'api res')
       setMessages([
         {
           message: res?.choices?.[0].message.content,
           sender: 'ChatGPT',
         },
         ...newMessages,
-        
-      ], )
+      ])
       setTyping(false)
     })
   }
@@ -80,6 +74,7 @@ const RightChat = () => {
         </div>
         <div className="buttonIn">
           <input
+            onKeyDown={(e) => e.key === "Enter" && sendMessage()}
             disabled={typing ? true : false}
             type="text"
             value={input}

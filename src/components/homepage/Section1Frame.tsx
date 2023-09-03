@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Eclipse from "./Eclipse"
 
 const Section1Component = ({isFrame}: {isFrame: boolean}) => {
+
+  let nav = useNavigate()
+
     return(
         <>
          <div className="section1-top">
@@ -14,7 +18,7 @@ const Section1Component = ({isFrame}: {isFrame: boolean}) => {
             conversational way.
           </div>
         </div>
-       {!isFrame &&  <button className="section1-top-btn">Continue</button>}
+       {!isFrame &&  <button className="section1-top-btn" onClick={() => nav('/chat')}>Continue</button>}
       </div>
       <div className="section1-bottom-container">
         <div className="content-wrapper">
